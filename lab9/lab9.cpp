@@ -5,10 +5,13 @@
 #include <string.h>
 
 struct Books {
-  char bookname[100];
-  char aauthor[100];
-  char aavailibility;
-  int pricel;
+  char bookname[100]; // название книги
+
+  char aauthor[100]; // автор книги
+
+  char aavailibility; // наличие книги в магазине
+
+  int pricel; // цена книги
 };
 
 struct HeaderB {
@@ -29,6 +32,10 @@ int main() {
   setlocale(LC_ALL, "");
 
   const int SIZE = 5;
+
+  if (SIZE > 0) { // проверяем размер массива книг
+    printf("Переменная положительна");
+  }
 
   struct Books books_st[SIZE] = {{"Двенадцать", "Блок А.", 'Y', 320},
                                  {"Одиссея", "Гомер", 'Y', 300},
